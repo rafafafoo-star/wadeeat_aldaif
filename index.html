@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وديعة الضيف - تسجيل أمانة / وديعة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>تسجيل وديعة ضيف</h2>
+    <form action="save_deposit.php" method="POST">
+        <div class="form-group">
+            <label for="ticket_code">رمز التذكرة (Ticket Code):</label>
+            <input type="text" id="ticket_code" name="ticket_code" required>
+        </div>
+
+        <div class="form-group">
+            <label for="guest_name">اسم الضيف (Guest Name):</label>
+            <input type="text" id="guest_name" name="guest_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="guest_phone">رقم جوال الضيف (Guest Phone):</label>
+            <input type="text" id="guest_phone" name="guest_phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="guest_id_number">رقم الهوية / الإقامة (ID Number):</label>
+            <input type="text" id="guest_id_number" name="guest_id_number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="service_type">نوع الخدمة (Service Type):</label>
+            <input type="text" id="service_type" name="service_type" required>
+        </div>
+
+        <div class="form-group">
+            <label for="deposit_location">موقع الوديعة (Deposit Location):</label>
+            <input type="text" id="deposit_location" name="deposit_location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="baggage_count">عدد الحقائب / الأمتعة (Baggage Count):</label>
+            <input type="text" id="baggage_count" name="baggage_count" required>
+        </div>
+
+        <div class="form-group">
+            <label for="status_text">حالة الوديعة (Status Text):</label>
+            <input type="text" id="status_text" name="status_text" value="موجودة" required>
+        </div>
+
+        <button type="submit">حفظ الوديعة</button>
+    </form>
+</div>
+
+</body>
+</html>
